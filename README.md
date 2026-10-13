@@ -1,0 +1,119 @@
+# JJ Tutorial
+
+[Jujutsu][100] or JJ is a git compatible version control system.
+
+[100]: https://github.com/jj-vcs/jj
+
+## Basic commands
+
+1. jj version
+
+```
+jj -V
+```
+
+2. Create a new project
+
+```
+jj git init
+```
+
+3. Status of repository
+
+```
+jj st
+```
+
+4. List config
+
+```
+jj config list
+```
+
+5. Add description to working copy commit
+
+```
+jj describe -m "hello world"
+```
+
+6. Start new changes
+
+```
+jj new
+```
+
+7. View log
+
+```
+jj log
+```
+
+## Squash Workflow
+
+1. Add a change with description
+
+```
+jj describe -m "print goodbye as well as hello"
+```
+
+2. Create a new empty change
+
+```
+jj new
+```
+
+3. Make changes to the code and save it
+
+4. Squash changes into previous change with description
+
+```
+jj squash
+```
+
+5. Use `jj log` in between each of the previous commands
+
+6. Use `jj squash -i` to interactively select changes
+
+7. Use "space" key to toggle select, "f" to toggle folding, "c" to confirm
+
+8. Use the following command to abandon changes
+
+```
+jj abandon
+```
+
+## Edit Workflow
+
+1. Add a change with a description
+
+```
+jj describe -m "only print hello world"
+```
+
+2. Make change to the code and save it
+
+3. Start working with a commit below the current
+
+```
+jj new -B @ -m "add more comments"
+```
+
+4. Make change to the code and save it
+
+5. Start working on the next commit
+
+```
+jj next --edit
+```
+
+6. Save changes and start new commit
+
+```
+jj new
+```
+
+## Links
+
+[JJ Tutorial][1000]
+
+[1000]: https://steveklabnik.github.io/jujutsu-tutorial/introduction/introduction.html
