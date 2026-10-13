@@ -112,6 +112,53 @@ jj next --edit
 jj new
 ```
 
+## Git repository
+
+1. Initialize a jj repo compatible with git
+
+```
+jj git init
+```
+
+2. List the git remote, both local and remote
+
+```
+git branch -a
+```
+
+3. Track the remote git repository
+
+```
+jj bookmark track master@origin
+```
+
+4. Display git remote
+
+```
+jj git remote list
+```
+
+5. List jj bookmarks and git branches
+
+```
+jj bookmark list -a
+```
+
+6. Make changes in the code and use jj to track changes
+
+7. Set the git branch and jj bookmark to the latest commit
+
+```
+jj bookmark set master
+```
+
+8. Push changes to the remote repository
+
+```
+jj git push
+```
+
+
 ## Links
 
 [JJ Tutorial][1000]
