@@ -158,6 +158,36 @@ jj bookmark set master
 jj git push
 ```
 
+## JJ workspaces
+
+[Demystifying Jujutsu Workspaces][200]
+
+[200]: https://www.joshualyman.com/2026/02/demystifying-jujutsu-jj-workspaces/
+
+1. Create a workspace directory
+mkdir ../workspace-b
+
+2. Add a workspace to jj
+jj workspace add ../workspace-b
+
+3. Create file in `default@` workspace
+echo "add line in workspace default@" >> a.txt
+
+4. Switch to `workspace-b`
+cd ../workspace-b
+
+5. Create the same file in `workspace-b` workspace
+echo "add line in workspace workspace-b@" >> a.txt
+
+6. Update workspace
+jj workspace update-stale
+
+7. Remove `workspace-b`
+rm -rf ../workspace-b
+
+8. Remove workspace from jj
+jj workspace forget workspace-b
+
 
 ## Links
 
