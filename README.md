@@ -4,6 +4,20 @@
 
 [100]: https://github.com/jj-vcs/jj
 
+## Setup environment
+
+1. Create the lock file
+
+```
+nix flake lock
+```
+
+2. Start a shell with the environment
+
+```
+nix develop
+```
+
 ## Basic commands
 
 1. jj version
