@@ -231,3 +231,7 @@ jj workspace forget workspace-b
 [JJ Tutorial][1000]
 
 [1000]: https://steveklabnik.github.io/jujutsu-tutorial/introduction/introduction.html
+
+[Using JJ with Coding Agents][1010]
+
+[1010]: https://minimallysufficient.com/ephemera/using-jj-with-coding-agents/
